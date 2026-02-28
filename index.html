@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+
+    <header>
+        <h1>FinanceFlow</h1>
+    </header>
+
+    <section id="stats">
+        <div class="card balance">
+            <h2>Balance</h2>
+            <p id="balance-amount">$0.00</p>
+        </div>
+
+        <div class="card income">
+            <h2>Income</h2>
+            <p id="balance-income">$0.00</p>
+        </div>
+
+        <div class="card expenses">
+            <h2>Expenses</h2>
+            <p id="balance-expenses">$0.00</p>
+        </div>
+    </section>
+
+    <main>
+        <article>
+            <button>Add Transaction</button>
+            <form>
+                <label for="name">Transaction name</label>
+                <input type="text" id="name" placeholder="Transaction name">
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" placeholder="Amount">
+                <label for="category">Category</label>
+                <select id="category">
+                    <option>Food & Groceries</option>
+                    <option>Transport</option>
+                    <option>Entertainment</option>
+                    <option>Health</option>
+                    <option>Shopping</option>
+                    <option>Salary</option>
+                </select>
+                <label for="balance">Transaction type</label>
+                <label for="formIncome">Income</label>
+                <input type="radio" name="balance" value="income" id="formIncome">
+                <label for="formExpense">Expense</label>
+                <input type="radio" name="balance" value="expense" id="formExpense">
+                <button type="submit">Add Transaction</button>
+            </form>
+        </article>
+
+        <section class="TransactionsBlock">
+
+            <div class="Transactions">
+            <h3>Transactions</h3>
+            <ul class="list">
+            </ul>
+            </div>
+
+        </section>
+
+        <section>
+            <canvas id="myChart"></canvas>
+            <div>
+                <button>All</button>
+                <button>Income</button>
+                <button>Expenses</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>FinanceFlow</div>
+
+        <div class="socials">
+            <img>
+            <img>
+            <img>
+        </div>
+
+        <div>Email</div>
+    </footer>
+</body>
+</html>
