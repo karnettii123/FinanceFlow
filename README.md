@@ -16,9 +16,9 @@ A modern, interactive web application for tracking income and expenses with data
 - **Chart.js:** Integration for professional-grade analytics.
 
 ## 📋 Roadmap & Progress
-- [ ] Initial Project Setup & Architecture
-- [ ] Semantic HTML5 Structure 
-- [ ] CSS Styling & Responsive Design
+- [✓] Initial Project Setup & Architecture
+- [✓] Semantic HTML5 Structure 
+- [InProcess] CSS Styling & Responsive Design
 - [ ] Core JavaScript Logic (Adding/Deleting Transactions)
 - [ ] LocalStorage Integration
 - [ ] Chart.js Integration for Analytics
@@ -27,4 +27,4 @@ A modern, interactive web application for tracking income and expenses with data
 ## 🔧 Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/karnettii123/FinanceFlow.git
+   git clone (https://github.com/karnettii123/FinanceFlow.git)
