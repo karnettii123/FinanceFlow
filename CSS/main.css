@@ -4,6 +4,16 @@
     font-family: "Inter", sans-serif;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main{
+    flex: 1;
+}
+
 :root {
     --main-bg: #0C0C0C;
     --card-bg: #181818;
@@ -20,7 +30,6 @@
 
 
     --border-color: #262626;
-    --card-radius: 12px;
 }
 
 body {
@@ -29,16 +38,19 @@ body {
 }
 
 header {
-    text-align: center;
-    line-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 100px;
+    height: 6rem;
+    background-color: var(--card-bg);
 }
 
 header h1 {
     font-size: 30px;
     letter-spacing: 1px;
     font-family: "Montserrat", sans-serif;
+    margin-left: 20px;
     
     opacity: 0.9;
 
@@ -54,4 +66,163 @@ header h1 {
     100% {
         opacity: 0.9;
     }
+}
+
+#stats {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card{
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 0.5rem;
+    font-size: 12px;
+}
+
+.card p {
+    text-align: center;
+}
+
+.income {
+    color: var(--accent-green);
+}
+
+.expenses {
+    color: var(--danger-red);
+}
+
+.mainObject {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.TransactionsBlock {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    width: 90vw;
+
+}
+
+.Transactions {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Transactions h3 {
+    width: 90%;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    background-color: #262626;
+    border-radius: 7px;
+}
+
+.list {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style-type: none;
+}
+
+.list li {
+    border-radius: 10px;
+    background-color: var(--border-color);
+    width: 15rem;
+    height: 3rem;
+}
+
+.chartsBlock {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    width: 90vw;
+}
+
+.chartsBlock div {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.chartsBlock div button {
+    margin-top: 10px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    color: var(--text-white);
+    width: 5rem;
+    height: 2rem;
+    transition: transform 0.3s ease,
+    background-color 0.5s ease;
+}
+
+.chartsBlock div button:hover {
+    background-color: var(--accent-hover);
+}
+
+.chartsBlock div button:active {
+    transform: scale(0.9);
+}
+
+.Add {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.Add button {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 10px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    color: var(--text-white);
+    width: 10rem;
+    height: 2rem;
+    transition: transform 0.3s ease,
+    background-color 0.5s ease;
+}
+
+.Add button:hover {
+    background-color: var(--accent-hover);
+}
+
+.Add button:active {
+    transform: scale(0.9);
+}
+
+.formAdd {
+    display: none;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 3rem;
+    background-color: var(--card-bg);
+}
+
+footer div a{
+    color: var(--text-white);
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+footer div a:hover {
+    color: var(--accent-hover);
 }

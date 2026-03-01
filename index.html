@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="CSS/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logo.png">
+    <title>FinanceFlow</title>
 </head>
 <body>
 
     <header>
+        <img src="images/logo.png" width="50px" height="50px">
         <h1>FinanceFlow</h1>
     </header>
 
@@ -32,9 +35,30 @@
     </section>
 
     <main>
-        <article>
+        <div class="mainObject">
+        <section class="TransactionsBlock">
+
+            <div class="Transactions">
+            <h3>Transactions</h3>
+            <ul class="list">
+                <li></li>
+            </ul>
+            </div>
+
+        </section>
+
+        <section class="chartsBlock">
+            <div>
+                <button>All</button>
+                <button>Income</button>
+                <button>Expenses</button>
+            </div>
+            <canvas id="myChart"></canvas>
+        </section>
+        </div>
+        <article class="Add">
             <button>Add Transaction</button>
-            <form>
+            <form class="formAdd">
                 <label for="name">Transaction name</label>
                 <input type="text" id="name" placeholder="Transaction name">
                 <label for="amount">Amount</label>
@@ -56,37 +80,14 @@
                 <button type="submit">Add Transaction</button>
             </form>
         </article>
-
-        <section class="TransactionsBlock">
-
-            <div class="Transactions">
-            <h3>Transactions</h3>
-            <ul class="list">
-            </ul>
-            </div>
-
-        </section>
-
-        <section>
-            <canvas id="myChart"></canvas>
-            <div>
-                <button>All</button>
-                <button>Income</button>
-                <button>Expenses</button>
-            </div>
-        </section>
     </main>
 
     <footer>
-        <div>FinanceFlow</div>
+        <img src="images/logo.png" width="30px" height="30px">
 
-        <div class="socials">
-            <img>
-            <img>
-            <img>
-        </div>
+        <h3>FinanceFlow</h3>
 
-        <div>Email</div>
+        <div><a href="mailto:danildigavcov@gmai.com">Email</a></div>
     </footer>
 </body>
 </html>
