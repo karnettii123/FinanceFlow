@@ -13,7 +13,7 @@
 <body>
 
     <header>
-        <img src="images/logo.png" width="50px" height="50px">
+        <img src="images/logo.png" alt="FinanceFlow logo" width="50px" height="50px">
         <h1>FinanceFlow</h1>
     </header>
 
@@ -42,6 +42,8 @@
             <h3>Transactions</h3>
             <ul class="list">
                 <li></li>
+                <li></li>
+
             </ul>
             </div>
 
@@ -57,33 +59,48 @@
         </section>
         </div>
         <article class="Add">
-            <button>Add Transaction</button>
-            <form class="formAdd">
-                <label for="name">Transaction name</label>
-                <input type="text" id="name" placeholder="Transaction name">
-                <label for="amount">Amount</label>
-                <input type="number" id="amount" placeholder="Amount">
-                <label for="category">Category</label>
-                <select id="category">
-                    <option>Food & Groceries</option>
-                    <option>Transport</option>
-                    <option>Entertainment</option>
-                    <option>Health</option>
-                    <option>Shopping</option>
-                    <option>Salary</option>
-                </select>
-                <label for="balance">Transaction type</label>
-                <label for="formIncome">Income</label>
-                <input type="radio" name="balance" value="income" id="formIncome">
-                <label for="formExpense">Expense</label>
-                <input type="radio" name="balance" value="expense" id="formExpense">
-                <button type="submit">Add Transaction</button>
-            </form>
+            <button class="openModal">Add Transaction</button>
         </article>
+        
+        <div class="modal">
+            <div class="modalOverlay"></div>
+            <button class="closeModal">X</button>
+            <div class="modalContent">
+                <form class="formAdd">
+                    <label for="name">Transaction name</label>
+                    <input type="text" id="name" placeholder="Transaction name">
+                    <label for="amount">Amount</label>
+                    <input type="number" id="amount" placeholder="Amount">
+                    <label for="category">Category</label>
+                    <select id="category">
+                        <option>Food & Groceries</option>
+                        <option>Transport</option>
+                        <option>Entertainment</option>
+                        <option>Health</option>
+                        <option>Shopping</option>
+                        <option>Salary</option>
+                    </select>
+                    
+                    <label for="balance">Transaction type</label>
+                    <div class="radio-group">
+                    <div class="radio-item">
+                    <label for="formIncome">Income</label>
+                    <input type="radio" name="balance" value="income" id="formIncome">
+                    </div>
+                    <div class="radio-item">
+                    <label for="formExpense">Expense</label>
+                    <input type="radio" name="balance" value="expense" id="formExpense">
+                    </div>
+                    </div>
+                    <button type="submit">Add Transaction</button>
+                    
+                    </form>
+            </div>
+        </div>
     </main>
 
     <footer>
-        <img src="images/logo.png" width="30px" height="30px">
+        <img src="images/logo.png" alt="FinanceFlow logo" width="30px" height="30px">
 
         <h3>FinanceFlow</h3>
 

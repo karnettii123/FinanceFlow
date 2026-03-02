@@ -2,12 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: "Inter", sans-serif;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    box-sizing: border-box;
 }
 
 main{
@@ -35,6 +30,9 @@ main{
 body {
     color: var(--text-white);
     background-color: var(--main-bg);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -106,7 +104,7 @@ header h1 {
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 12px;
-    width: 90vw;
+    width: 90%;
 
 }
 
@@ -128,6 +126,7 @@ header h1 {
 }
 
 .list {
+    width: 80%;
     margin-top: 30px;
     display: flex;
     flex-direction: column;
@@ -138,15 +137,15 @@ header h1 {
 .list li {
     border-radius: 10px;
     background-color: var(--border-color);
-    width: 15rem;
-    height: 3rem;
+    padding: 10px 20px;
+    height: auto;
 }
 
 .chartsBlock {
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 12px;
-    width: 90vw;
+    width: 90%;
 }
 
 .chartsBlock div {
@@ -163,7 +162,7 @@ header h1 {
     color: var(--text-white);
     width: 5rem;
     height: 2rem;
-    transition: transform 0.3s ease,
+    transition: transform 0.1s linear,
     background-color 0.5s ease;
 }
 
@@ -181,7 +180,7 @@ header h1 {
     margin: 10px;
 }
 
-.Add button {
+.openModal {
     font-size: 15px;
     font-weight: 600;
     margin-top: 10px;
@@ -195,16 +194,12 @@ header h1 {
     background-color 0.5s ease;
 }
 
-.Add button:hover {
+.openModal:hover {
     background-color: var(--accent-hover);
 }
 
-.Add button:active {
+.openModal:active {
     transform: scale(0.9);
-}
-
-.formAdd {
-    display: none;
 }
 
 footer{
@@ -225,4 +220,126 @@ footer div a{
 
 footer div a:hover {
     color: var(--accent-hover);
+}
+
+.modal {
+    display: flex;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    position: fixed;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+}
+
+.modalOverlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.closeModal {
+    position: relative;
+    z-index: 3;
+    top: -290px;
+    left: 500px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    transition: transoform 0.3s ease, color 0.3s ease;
+}
+
+.closeModal:hover{
+    color: var(--accent-hover);
+}
+
+.closeModal:active{
+    transform: scale(0.9);
+}
+
+.modalContent {
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    border: 1px solid var(--border-color);
+    background: var(--card-bg);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    width: 30%;
+    height: 70%;
+    gap: 30px;
+}
+
+.formAdd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    color: var(--text-white);
+}
+
+.closeModal {
+    background-color: var(--card-bg);
+    border: none;
+    color: var(--text-white);
+    width: 20px;
+    height: 20px;
+}
+
+.formAdd input {
+    padding-left: 5px;
+    color: var(--text-white);
+    height: 2rem;
+    border-radius: 5px;
+    border:1px solid var(--border-color);
+    background-color: var(--input-bg);
+}
+
+.formAdd select {
+    border-radius: 5px;
+    border:1px solid var(--border-color);
+    color: var(--text-gray);
+    background-color: var(--input-bg);
+}
+
+.formAdd button {
+    margin-top: 10px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    color: var(--text-white);
+    width: 12rem;
+    height: 3rem;
+    transition: transform 0.1s linear,
+    background-color 0.5s ease;
+}
+
+.formAdd button:hover {
+    background-color: var(--accent-hover);
+}
+
+.formAdd button:active {
+    transform: scale(0.9);
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+}
+
+.radio-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
