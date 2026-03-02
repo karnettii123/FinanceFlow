@@ -224,6 +224,8 @@ footer div a:hover {
 
 .modal {
     display: flex;
+    opacity: 0;
+    visibility: hidden;
     top: 0;
     left: 0;
     justify-content: center;
@@ -233,6 +235,7 @@ footer div a:hover {
     z-index: 1000;
     width: 100vw;
     height: 100vh;
+    transition: all 0.2s ease;
 }
 
 .modalOverlay {
@@ -246,14 +249,14 @@ footer div a:hover {
 }
 
 .closeModal {
-    position: relative;
+    position: absolute;
     z-index: 3;
-    top: -290px;
-    left: 500px;
+    top: 10px;
+    right: 10px;
     width: 50px;
     height: 50px;
     font-size: 20px;
-    transition: transoform 0.3s ease, color 0.3s ease;
+    transition: transform 0.1s ease, color 0.3s ease;
 }
 
 .closeModal:hover{
@@ -275,7 +278,7 @@ footer div a:hover {
     justify-content: center;
     align-items: center;
     z-index: 2;
-    width: 30%;
+    width: 80%;
     height: 70%;
     gap: 30px;
 }
