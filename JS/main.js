@@ -6,7 +6,6 @@ const modalClose = document.querySelector(".closeModal")
 modalOpen.addEventListener('click', () => {
     modal.style.visibility = 'visible';
     modal.style.opacity = '1';
-    modal.style.transform = 'translateY(0px)';
 });
 
 modalOvelay.addEventListener('click', () =>{
