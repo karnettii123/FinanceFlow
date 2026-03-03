@@ -223,19 +223,18 @@ footer div a:hover {
 }
 
 .modal {
-    display: flex;
     opacity: 0;
     visibility: hidden;
+    display: flex;
     top: 0;
     left: 0;
     justify-content: center;
     align-items: center;
-    opacity: 1;
     position: fixed;
     z-index: 1000;
     width: 100vw;
     height: 100vh;
-    transition: all 0.2s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .modalOverlay {
@@ -249,6 +248,7 @@ footer div a:hover {
 }
 
 .closeModal {
+    text-align: center;
     position: absolute;
     z-index: 3;
     top: 10px;
@@ -281,6 +281,8 @@ footer div a:hover {
     width: 80%;
     height: 70%;
     gap: 30px;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
 }
 
 .formAdd {
@@ -345,4 +347,33 @@ footer div a:hover {
     justify-content: center;
     align-items: center;
     gap: 20px;
+}
+
+.modal.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal.active .modalContent{
+        transform: scale(1);
+}
+
+
+li {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+}
+
+.li-name{
+    font-size: 15px;
+}
+
+.li-amount {
+    font-size: 15px;
+}
+
+.li-category{
+    font-size: 15px;
 }
