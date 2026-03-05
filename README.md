@@ -18,10 +18,10 @@ A modern, interactive web application for tracking income and expenses with data
 ## 📋 Roadmap & Progress
 - [✓] Initial Project Setup & Architecture
 - [✓] Semantic HTML5 Structure 
-- [InProcess] CSS Styling & Responsive Design
-- [ ] Core JavaScript Logic (Adding/Deleting Transactions)
-- [ ] LocalStorage Integration
-- [ ] Chart.js Integration for Analytics
+- [✓] CSS Styling & Responsive Design
+- [✓] Core JavaScript Logic (Adding/Deleting Transactions)
+- [✓] LocalStorage Integration
+- [InProgress] Chart.js Integration for Analytics
 - [ ] Final UI/UX Polishing
 
 ## 🔧 Installation
