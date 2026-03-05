@@ -1,10 +1,15 @@
 const modalOpen = document.querySelector(".openModal")
 const modal = document.querySelector(".modal")
-const modalOvelay = document.querySelector(".modalOverlay")
+const modalOverlay = document.querySelector(".modalOverlay")
 const modalClose = document.querySelector(".closeModal")
 const form = document.querySelector(".formAdd")
 
 const list = document.querySelector(".list")
+
+let balanceIncome = document.getElementById("balance-income")
+let balanceExpenses = document.getElementById("balance-expenses")
+let balanceAll = document.getElementById("balance-amount")
+
 
 let transactions = []
 let transactionId = 0;
@@ -13,7 +18,7 @@ modalOpen.addEventListener('click', () => {
     modal.classList.add('active');
 });
 
-modalOvelay.addEventListener('click', () =>{
+modalOverlay.addEventListener('click', () =>{
     modal.classList.remove('active');
 
 });
@@ -75,7 +80,60 @@ function getForm(){
     }
 }
 
+function saveTransactions () {
+    localStorage.setItem("transactions", JSON.stringify(transactions))
+}
 
+function loadTransactions(){
+    const data = localStorage.getItem("transactions")
+    if(data) 
+        transactions = JSON.parse(data)
+}
+
+function updateStats () {
+    let income = 0
+    let expenses = 0
+    let balance = 0
+
+    transactions.forEach(arr => {
+        if (arr.balance === "income") {
+            income += arr.amount
+        } else if (arr.balance === "expenses") {
+            expenses += arr.amount
+        }
+        balance = income - expenses
+
+        balanceIncome.innerHTML = income
+        balanceExpenses.innerHTML = expenses
+        balanceAll.innerHTML = balance
+    })
+    return { income, expenses }
+}
+
+function renderChart(){
+    const { income, expenses } = updateStats()
+    const ctx = document.getElementById("myChart").getContext("2d")
+    if (chart) 
+        chart.destroy()
+
+    chart = new Chart(ctx, {
+        type:'doughnut',
+        data: {
+            labels:["Income","Expenses"],
+            datasets:[{
+                label:"FinanceFlow",
+                data:[income, expenses],
+                backgroundColor: ["#45A133", "#DA3633" ]
+            }]
+        }, 
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { position: 'bottom', labels: { color: "#fff" } }
+            }
+        }
+    })
+}
 
 
 form.addEventListener('submit', (event) => {
@@ -85,10 +143,18 @@ form.addEventListener('submit', (event) => {
     if (!data) return
 
     transactions.push(data);
+    saveTransactions()
 
     renderTransaction()
+    updateStats()
+    renderChart
 
     console.log(transactions)
     form.reset();
     modal.classList.remove('active');
 })
+
+loadTransactions()
+renderTransaction()
+updateStats()
+renderChart()
