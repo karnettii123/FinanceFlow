@@ -10,6 +10,7 @@ let balanceIncome = document.getElementById("balance-income")
 let balanceExpenses = document.getElementById("balance-expenses")
 let balanceAll = document.getElementById("balance-amount")
 
+let chart
 
 let transactions = []
 let transactionId = 0;
@@ -147,7 +148,7 @@ form.addEventListener('submit', (event) => {
 
     renderTransaction()
     updateStats()
-    renderChart
+    renderChart()
 
     console.log(transactions)
     form.reset();
