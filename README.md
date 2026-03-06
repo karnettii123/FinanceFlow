@@ -21,8 +21,8 @@ A modern, interactive web application for tracking income and expenses with data
 - [✓] CSS Styling & Responsive Design
 - [✓] Core JavaScript Logic (Adding/Deleting Transactions)
 - [✓] LocalStorage Integration
-- [InProgress] Chart.js Integration for Analytics
-- [ ] Final UI/UX Polishing
+- [✓] Chart.js Integration for Analytics
+- [✓] Final UI/UX Polishing
 
 ## 🔧 Installation
 1. Clone the repository:
