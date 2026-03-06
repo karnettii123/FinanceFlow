@@ -177,6 +177,7 @@ header h1 {
 .Add {
     display: flex;
     justify-content: center;
+    gap: 10px;
     margin: 10px;
 }
 
@@ -385,4 +386,26 @@ li {
     height: 300px;
     display: flex;
     justify-content: center;
+}
+
+.delete {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 10px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    color: var(--text-white);
+    width: 10rem;
+    height: 2rem;
+    transition: transform 0.3s ease,
+    background-color 0.5s ease;
+}
+
+.delete:hover {
+    background-color: var(--accent-hover);
+}
+
+.delete:active {
+    transform: scale(0.9);
 }

@@ -6,6 +6,8 @@ const form = document.querySelector(".formAdd")
 
 const list = document.querySelector(".list")
 
+const clearButton = document.querySelector(".delete")
+
 let balanceIncome = document.getElementById("balance-income")
 let balanceExpenses = document.getElementById("balance-expenses")
 let balanceAll = document.getElementById("balance-amount")
@@ -129,6 +131,7 @@ function renderChart(){
         }, 
         options: {
             responsive: true,
+            maintainAspectRatio: false,
             plugins: {
                 legend: { position: 'bottom', labels: { color: "#fff" } }
             }
@@ -159,3 +162,14 @@ loadTransactions()
 renderTransaction()
 updateStats()
 renderChart()
+
+clearButton.addEventListener('click', () => {
+    transactions = [] 
+
+    localStorage.removeItem("transactions")
+
+    renderTransaction()
+    updateStats()
+    renderChart()
+
+})
