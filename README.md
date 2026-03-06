@@ -24,7 +24,5 @@ A modern, interactive web application for tracking income and expenses with data
 - [✓] Chart.js Integration for Analytics
 - [✓] Final UI/UX Polishing
 
-## 🔧 Installation
-1. Clone the repository:
-   ```bash
-   git clone (https://github.com/karnettii123/FinanceFlow.git)
+## 🔧 How to use
+https://karnettii123.github.io/FinanceFlow/
